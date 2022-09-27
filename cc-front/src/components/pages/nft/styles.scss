@@ -1,0 +1,189 @@
+@use '../../../../styles/vars';
+
+.nft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    min-height: 85vh;
+    margin: .5rem;
+    padding-top: vars.$dimension_header_height;
+
+    &__image{
+        height: 225px;
+        width: 225px;
+        background-color: vars.$color_primary;
+        text-align: center;
+        border-radius: .5rem;
+        object-fit: cover;
+        box-shadow: vars.$boxShadow_Light;
+
+        background: linear-gradient(-45deg, vars.$color_callToAction, #e73c7e,vars.$color_callToAction, vars.$color_primary);
+        background-size: 300% 300%;
+        animation: gradient 15s ease infinite;
+
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    }
+
+    &__actionsButtons{
+        // display: grid;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        width: 225px;
+        flex-direction: row;
+        // grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+
+        button{
+            background-color: transparent;
+        }
+        // ion-icon{
+        //     color: vars.$color_callToAction;
+        // }
+
+        // .share-icon, .rs-dropdown-toggle-icon, .rs-dropdown-toggle, .rs-dropdown-toggle-no-caret, .rs-btn, .rs-btn-default{
+        //     color: red;
+        // }
+    }
+
+    &__price{
+        display: flex;
+        width: 100%;
+        justify-content:space-between ;
+        align-items: center;
+        background-color: vars.$color_secondary;
+        border-radius: .5rem;
+        padding: 1rem;
+
+        &__current{
+            display: flex;
+            gap: 1rem;
+            align-items: baseline;
+            
+        }
+
+        button{
+            background-color: vars.$color_callToAction;
+            color: white;
+            height: 2rem;
+            width: 6rem;
+            border-radius: .5rem;
+            font-weight: bold;
+        }
+
+        h3{
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: vars.$color_text;
+        }
+
+        &__buy{
+            
+            p{
+                color: vars.$color_callToAction;
+                font-weight: bold;
+                font-size: 1.1rem;
+            
+            }
+        }
+
+    }
+
+    &__infos{
+        width: 100%;
+        margin: .5rem;
+        padding: 0 1rem;
+
+        .rs-panel-body{
+            padding: 0 0 1rem 0;
+        }
+
+        span{
+            color: vars.$color_text;
+            font-size: 1.2rem;
+        }
+        
+        // margin-bottom: 2rem;
+        h3{
+            font-size: .9rem;
+            color: vars.$color_text;
+
+        }
+
+        p{
+            font-size: .8rem;
+            background-color: vars.$color_secondary;
+            margin: .2rem;
+            padding: .4rem;
+            text-align: left;
+            vertical-align: middle;
+            border-radius: .75rem;
+        }
+        &__main{
+            display: grid;
+            flex-direction: row;
+            grid-template-columns: repeat(3,1fr);
+            
+            text-align: center;
+            
+			&__rarity__progess {
+				background-color: vars.$color_secondary;
+				margin: .2rem;
+            	padding: 0.5rem;
+				border-radius: .75rem;
+			}
+        }
+
+        &__description{
+
+                font-size: .9rem;
+
+        }
+
+        &__details{
+            display: grid;
+            flex-direction: row;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+
+        &__properties{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+    }
+
+    &__others{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    
+
+}
+
+.modalePurchase{
+
+    background-color: darkgray;
+}
+
+.modaleFullScreen{
+    padding: 10px;
+}
+

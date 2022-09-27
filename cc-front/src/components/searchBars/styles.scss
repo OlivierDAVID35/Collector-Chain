@@ -1,0 +1,15 @@
+@use '../../../styles/vars';
+
+
+
+
+Input{
+    height: 2.2rem;
+    border:0
+}
+
+.rs-btn, .rs-picker{
+    width: 100%;
+    height: 2.2rem;
+    background-color: vars.$color_callToAction;
+}

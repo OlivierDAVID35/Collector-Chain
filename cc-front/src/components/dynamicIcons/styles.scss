@@ -1,0 +1,28 @@
+@use '../../../styles//vars';
+
+.share-icon {
+	position: relative;
+	z-index: 6;
+	background-color: vars.$color_callToAction ;
+}
+
+.modale-share {
+	position:absolute;
+	top: 1.75rem;
+	right: -0.25rem;
+	background: vars.$color_secondary;
+	display:flex;
+	flex-direction: column;
+	width: fit-content;
+	padding: 0.25rem;
+	border-radius: 0.75rem;
+
+	&-logo {
+		margin: 0.25rem 0;
+	}
+}
+
+.modale-share-button {
+	background-color: transparent;
+	padding-top: 0.25rem;
+}

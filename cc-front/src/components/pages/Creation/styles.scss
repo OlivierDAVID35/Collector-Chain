@@ -1,0 +1,33 @@
+@use '../../../../styles/vars';
+
+.creation{
+    min-height: 85vh;
+    margin: 3.5rem .5rem;
+    // margin-top: vars.$dimension_header_height;
+    margin-top: 3.5rem;
+
+    p{
+        padding: .5rem 0;
+        margin-bottom: 1rem;
+    }
+
+    h2{
+        color: vars.$color_callToAction;
+        text-align: center;
+        margin-top: .5rem;
+    }
+
+    span{
+        color: vars.$color_text_lighter;
+    }
+
+    .button{
+        background-color: vars.$color_callToAction;
+        color: vars.$color_text_secondary;
+        width: 100%;
+        height: 2rem;
+        align-items: baseline;
+        margin-top: .5rem;
+        font-size: 1rem;
+    }
+}

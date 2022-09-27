@@ -1,0 +1,16 @@
+.events__searchBar {
+	z-index: 1;
+	display: flex;
+	margin: .5rem;
+	gap: .5rem;
+
+
+	align-items: center;
+	& .rs-dropdown {
+		text-align: center;
+		width: calc(100vw/3);
+	}
+	& a {
+		color:black;
+	}
+}

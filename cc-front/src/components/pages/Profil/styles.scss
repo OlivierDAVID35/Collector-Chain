@@ -1,0 +1,120 @@
+@use '../../../../styles/vars';
+
+.profile, .profile__id {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__button {
+		margin: 1rem 0;
+		text-decoration: underline;
+		color: rgb(85, 116, 255);
+		background-color: transparent;
+	}
+	&__pic {
+		position: relative;
+		width: 40%;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: vars.$color_secondary;
+		margin: 1rem;
+		& h3 {
+			position: absolute;
+			top: 2.6rem;
+			left: 13em;
+			color: white;
+			background-color: rgb(128, 35, 214);
+			width: fit-content;
+			
+			padding: 0.2rem 0.5rem 0.1rem;
+			border: none;
+			border-radius: 1rem;
+		}
+		&-image{
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+
+		&-input {
+			display: none;
+		}
+		&-add-icon {
+			position: absolute;
+			left: 43%;
+			top: 43%;
+		}
+		&-trash-icon {
+			position: absolute;
+			bottom: -0.5rem;
+			right: -0.5rem;
+		}
+		& ion-icon {
+			zoom: 0.8;
+			color: vars.$color_callToAction;
+		}
+		
+	}
+	&__link {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-left: 2rem;
+		color: rgb(85, 116, 255);
+		text-decoration: underline;
+		& .link {
+			margin: 0.5rem 0;
+		}
+	}
+	&__preferency {
+		display: flex;
+		width: 100%;
+		margin-left: 2rem;
+		align-items: center;
+		& p {
+			height: 100%;
+			padding-top: 0.25rem;
+			margin-left: 1rem;
+		}
+	}
+	&__helper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&-n0 {
+			color: vars.$color_text_secondary;
+			background-color: lightgrey;
+			width: fit-content;
+			padding: 0.2rem 0.5rem 0.1rem;
+			border: none;
+			border-radius: 1rem;
+		}
+		&-n1 {
+			color: vars.$color_text;
+			background-color: rgb(128, 35, 214);
+			width: fit-content;
+			padding: 0.2rem 0.5rem 0.1rem;
+			border: none;
+			border-radius: 1rem;
+		}
+		& p {
+			margin: 0 2rem;
+		}
+	}
+	.nextui-button-text {
+		z-index:0;
+	}
+	
+}
+
+// "input" name, firstname...
+.nextui-c-eXOOPO {
+	padding: 0.75rem;
+	background-color: lightgrey;
+}
+
+//Bouton "Add ID"
+.nextui-c-iWjDFM {
+	color: white;
+	background-color: lightgrey;
+}

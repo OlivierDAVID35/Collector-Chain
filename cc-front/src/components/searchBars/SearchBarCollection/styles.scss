@@ -1,0 +1,13 @@
+.searchBarCollection{
+    display: flex;
+    flex-direction: column;
+    height: 1rem;
+    margin: .5rem 0;
+    
+    &__filters{
+        display: grid;
+        gap: .5rem;
+        flex-direction: row;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,242 @@
+@endpoint = http://localhost:{{$dotenv PORT}}/api
+
+### API docs
+GET {{ endpoint }}v3/api-docs
+
+### Route Principale ###
+
+### Home page 
+GET {{ endpoint }}/
+
+### User ###
+
+### Post SignUp 
+POST {{ endpoint }}/sign_up
+Content-Type: application/json
+
+{
+
+    "nickname":"",
+    "email":"loic@loic5 .com",
+    "password":"user3456",
+    "passwordConfirm": "user3456",
+    "wallet" : 1
+}
+
+### update SignUp 
+PATCH {{ endpoint }}/profil/26/update
+Content-Type: application/json
+
+{
+    "email":"",
+    "nickname": "",
+    "media": "",
+    "newPassword": "",
+    "password":"password"
+}
+#### Post login 
+POST {{ endpoint }}/login
+Content-type: application/json
+
+{
+    "email":"user@user.com",
+    "password": "password"
+}
+
+### Profil 
+GET {{ endpoint }}/profil/10
+
+### Delete profil 
+DELETE {{ endpoint }}/profil/4/delete
+
+### Update profil
+PATCH {{ endpoint }}/profil/33
+Content-Type: application/json
+
+{
+                "email": "user3456"
+}
+### Forget User
+POST {{ endpoint }}/forget_user
+Content-Type: application/json
+
+{
+    "email": "collectorchain.test@gmail.com"
+}
+
+### TOKEN (JWT) ###
+
+### test autentificate token
+GET {{endpoint}}/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQHVzZXIuY29tIiwibmlja25hbWUiOiJ1c2VyIiwid2FsbGV0IjoiMTUwLjAwMDAiLCJpc0FkbWluIjpmYWxzZSwibWVkaWEiOm51bGwsImlhdCI6MTY2MTE3NTMwMSwiZXhwIjoxNjYxMTc1MzIxfQ.f__bo_jkhDXLFzrvRu2cTBESnSSg2tT7xCimzM6lYMQ
+
+### refresh token
+POST {{endpoint}}/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQHVzZXIuY29tIiwibmlja25hbWUiOiJ1c2VyIiwid2FsbGV0IjoiMTUwLjAwMDAiLCJpc0FkbWluIjpmYWxzZSwibWVkaWEiOm51bGwsImlhdCI6MTY2MTE3NTI3OH0.IHdrBFYLh6GYVl-8seE-JgO3oRcz5Pb5icmIN48zuUE"
+}
+
+### delete token
+POST {{endpoint}}/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ1c2VyQHVzZXIuY29tIiwibmlja25hbWUiOiJ1c2VyIiwid2FsbGV0IjoiMTUwLjAwMDAiLCJpc0FkbWluIjpmYWxzZSwibWVkaWEiOm51bGwsImlhdCI6MTY2MDkxMzIyNH0.h0J1HmQnAeeKwl2mfyPcOzKNdaV5J8yFryjpYhkL2bY"
+}
+
+### Events ###
+
+### Event
+GET {{ endpoint }}/events
+
+### Post event
+POST {{ endpoint }}/events
+Content-Type: application/json
+
+{}
+
+### Delete event
+DELETE {{ endpoint }}/events
+Content-Type: application/json
+
+{}
+
+### Update event
+PATCH {{ endpoint }}/events
+Content-Type: application/json
+
+{}
+
+### Collections ###
+
+### Page all Collections
+GET {{ endpoint }}/collections/?limit=2
+
+### Page Collection
+GET {{ endpoint }}/collection/1
+
+### Page Collection
+POST {{ endpoint }}/collection
+Content-Type: application/json
+
+{
+    "name": "test4",
+    "description": "test",
+    "media": "test",
+    "category_id": 2
+}
+
+### Page Collection
+DELETE {{ endpoint }}/collection/194
+
+### Page Collection
+PATCH {{ endpoint }}/collection/1
+Content-Type: application/json
+
+{
+                "id": 1,
+                "name": "test",
+                "description": "JS"
+}
+
+### Categories ###
+
+### Categories
+GET {{ endpoint }}/categories/?limit=2
+
+### post categories
+POST {{endpoint}}/categories
+Content-Type: application/json
+
+{
+    "name" : "test2",
+    "description" : "description1",
+    "media" : "media1"
+}
+
+### Delete categories
+DELETE {{ endpoint }}/categories/246
+
+### Update categories
+PATCH {{ endpoint }}/categories/1
+Content-Type: application/json
+
+{
+    "description": "Poste"
+}
+
+### Categories/collections
+GET {{ endpoint }}/categories/2/collections
+
+### NFT ###
+
+### Collections/NFT
+GET {{ endpoint }}/collections/2/nft/?limit=
+
+### NFT
+GET {{ endpoint }}/nft/?limit=2
+
+### NFT User
+GET {{ endpoint }}/1/nft/?limit=2
+
+### Post NFT
+POST {{ endpoint }}/nft
+Content-Type: application/json
+
+{
+    "name": "dayvr42evre date",
+    "description": "test",
+    "price": 12,
+    "forSale": true,
+    "media": "test",
+    "collection_id": 1,
+    "creator_id": 1,
+    "owner_id": 1,
+    "rarity": "10",
+    "serial": "156",
+    "properties" : [
+        {"name": "n4", "tag":"t4"},
+        {"name": "n5", "tag":"t5"},
+        {"name": "n6", "tag":"t6"}
+    ]
+}
+
+### Delete NFT
+DELETE {{ endpoint }}/nft/200
+
+### Update NFT
+PATCH {{ endpoint }}/nft/202
+Content-Type: application/json
+
+{
+    "showcase_id": 2
+}
+
+### Property
+GET {{ endpoint }}/property/?limit=2
+
+### Tag
+GET {{ endpoint }}/tag/?limit=1
+
+### Showcase ###
+
+### Showcase User
+GET {{ endpoint }}/showcase/1
+
+### Favoris User ####
+
+### Favoris
+GET {{ endpoint }}/favorite/1/?limit=
+
+### Favoris
+POST {{ endpoint }}/favorite/1/9
+
+
+### Favoris
+DELETE {{ endpoint }}/favorite/1/9
+
+
+### Search
+GET {{ endpoint }}/search/?q=erous

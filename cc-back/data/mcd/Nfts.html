@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>Favori</span> (
+    <span class='foreign primary'>token</span>,
+    <span class='foreign primary'>email</span>
+  )
+</div>
+<div>
+  <span class='relation'>CATEGORY</span> (
+    <span class='primary'>name</span>,
+    <span class='normal'>description</span>,
+    <span class='normal'>media</span>
+  )
+</div>
+<div>
+  <span class='relation'>COLLECTION</span> (
+    <span class='primary'>collection_id</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>description</span>,
+    <span class='normal'>media</span>,
+    <span class='foreign'>name.1</span>
+  )
+</div>
+<div>
+  <span class='relation'>NFT</span> (
+    <span class='primary'>token</span>,
+    <span class='normal'>name</span>,
+    <span class='normal'>description</span>,
+    <span class='normal'>price</span>,
+    <span class='normal'>forSale</span>,
+    <span class='normal'>media</span>,
+    <span class='foreign'>collection_id</span>,
+    <span class='foreign'>email</span>
+  )
+</div>
+<div>
+  <span class='relation'>USER</span> (
+    <span class='primary'>email</span>,
+    <span class='normal'>nickname</span>,
+    <span class='normal'>password</span>,
+    <span class='normal'>wallet</span>,
+    <span class='normal'>isAdmin</span>,
+    <span class='normal'>media</span>
+  )
+</div>
+<div>
+  <span class='relation'>Contient</span> (
+    <span class='foreign primary'>token</span>,
+    <span class='foreign primary'>name</span>
+  )
+</div>
+<div>
+  <span class='relation'>PROPERTY</span> (
+    <span class='primary'>name</span>,
+    <span class='foreign'>name.1</span>
+  )
+</div>
+<!--
+<div>
+  <span class='relation'>TAG</span> (
+    <span class='primary'>name</span>
+  )
+</div>
+-->
+</div>
+</body>
+</html>

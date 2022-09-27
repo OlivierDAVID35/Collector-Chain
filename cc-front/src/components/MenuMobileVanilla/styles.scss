@@ -1,0 +1,171 @@
+@use'../../../styles/vars';
+
+.menuMobile{
+    z-index: 20;
+	background-color: vars.$color_secondary;
+	width: 100vw;
+	height: vars.$dimension_menuMobile_height;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    // padding: 1rem 0rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    font-weight: bold;
+    box-shadow: vars.$boxShadow_footer;
+
+    &__lvl1{
+        position: relative;
+        padding: .8rem 0;
+        font-size: 1.2rem;
+        bottom: .2rem;
+        transition: all .5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+
+        &--active{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            transition: all .5s;
+            position: relative;
+            padding: .8rem 0;
+            font-size: 1.2rem;
+            bottom: .2rem;
+            color: vars.$color_callToAction;
+
+            img{
+                width: 2rem;
+                aspect-ratio: 1;
+                border-radius: 1rem;
+    
+            }
+        }
+
+        &--create{
+            margin: .5rem;
+            border-radius: 2rem;
+            // background-color: vars.$color_callToAction;
+            box-shadow: 0px 0px 20px vars.$color_callToAction;
+            position: relative;
+            bottom: .2rem;
+            color: vars.$color_text_lighter;
+            font-size: 1.4rem;
+            vertical-align: middle;
+            z-index: 50;
+            a:link, a:visited{
+                text-decoration: none;
+                color: vars.$color_callToAction;
+            }
+            animation: background 3s ease infinite;
+
+            @keyframes background {
+                0%{
+                    box-shadow: 0 0 15px vars.$color_callToAction;
+                }
+                50%{
+                    box-shadow: 0 0 10px rgba($color: vars.$color_callToAction, $alpha: .2);
+                }
+                100%{
+                    box-shadow: 0 0 15px vars.$color_callToAction;
+                }
+                
+            }
+            
+        }
+
+        img{
+            width: 2rem;
+            aspect-ratio: 1;
+            border-radius: 1rem;
+
+        }
+    }
+        
+    &__lvl2{
+        position: absolute;
+        // left: 0px;
+        bottom: vars.$dimension_menuMobile_height;
+        // background-color: vars.$color_text;
+        background-color: vars.$color_background;
+        box-shadow: 0 0 10px vars.$color_secondary;
+        width: 50vw;
+        text-align: center;
+        // color: vars.$color_primary;
+        color: vars.$color_text;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+        
+        &__item, &__item_user{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 3rem;
+            vertical-align: baseline;
+            list-style: none;
+            border-bottom: solid 1px vars.$color_text;
+        }
+		&__item:nth-child(6){
+   
+            border-bottom: solid 1px transparent;
+        }
+		       
+		&__item_user:nth-child(4){
+   
+            border-bottom: solid 1px transparent;
+        }
+        
+        &--explore{
+            &--visible{
+                transition: all .5s;
+                border-top-right-radius:1rem ;
+            }
+            border-top-right-radius:1rem ;
+            transition: all .5s;
+            transform: translateX(-50vw)
+        }
+        
+        &--user{
+            &--visible{
+                border-top-left-radius: 1rem;
+                right: 0;
+                transition: all .5s;
+            }
+            right: 0;
+            transition: all .5s;
+            transform: translateX(50vw);
+            border-top-left-radius: 1rem;
+        }
+    }
+
+    &__lvl3{
+        z-index: 50;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: red;
+        box-shadow: 0 0 10px vars.$color_secondary;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        color: vars.$color_primary;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+
+        &__item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 3rem;
+            vertical-align: baseline;
+            list-style: none;
+            border-bottom: solid 1px vars.$color_primary;
+        }
+    }
+}

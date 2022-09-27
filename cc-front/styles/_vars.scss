@@ -1,0 +1,32 @@
+// colors base
+// $color_callToAction: #ffb700;
+// $color_background: darkgrey;
+// $color_primary: grey;
+// $color_secondary: #e5e5e5;
+
+// colors test1 
+$color_callToAction: #ff9c11;
+$color_background: #3F4451;
+$color_primary: #3F4451;
+$color_secondary: #1F2127;
+$color_text:#d3d5dd;
+$color_text_secondary: #34383f;
+$color_text_lighter: #e5e7ed;
+
+// colors test2
+// $color_callToAction: #F5CB5C;
+// $color_background: #333533;
+// $color_primary: #333533;
+// $color_secondary: #242423;
+// $color_text:#E8EDDF;
+// $color_text_secondary: #242423;
+
+
+//dimensions
+$dimension_header_height: 3rem;
+$dimension_menuMobile_height: 4rem;
+
+// Effects
+$boxShadow_Light : 0px 0px 10px $color_secondary;
+$boxShadow_header : 0 5px 5px rgba(99, 103, 114, 0.2) ;
+$boxShadow_footer : 0 -5px 5px rgba(99, 103, 114, 0.2) ;

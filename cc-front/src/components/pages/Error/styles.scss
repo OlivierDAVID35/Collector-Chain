@@ -1,0 +1,30 @@
+
+@use '../../../../styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.error {
+	font-family: 'Righteous', cursive;
+	&__text1 {
+		position: fixed;
+		top: 30%;
+		text-align: center;
+		font-size:150%;
+		font-weight: 700;
+		letter-spacing: 0.1rem;
+		color:vars.$color_text_lighter;
+		text-shadow: vars.$boxShadow_Light;
+		margin: 0.1rem;
+	}
+	&__text2 {
+		position: fixed;
+		top: 65%;
+		text-align: center;
+		font-size: 150%;
+		font-weight: 700;
+		letter-spacing: 0.1rem;
+		color:vars.$color_text_lighter;
+		text-shadow: vars.$boxShadow_Light;
+		margin: 0.5rem;
+	}
+}
+

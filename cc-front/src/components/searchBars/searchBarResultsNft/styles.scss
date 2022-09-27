@@ -1,0 +1,38 @@
+.searchBarResultsNft {
+    margin: 0.5rem 0;
+
+    &__form{
+        width: 100%;
+		margin-bottom: 0.25rem;
+
+        input{
+            width: 100%;
+            height: 1.5rem;
+            border:0
+        }
+    }
+    
+    &__filters{
+        display: grid;
+        height: 1.5rem;
+        gap: .5rem;
+        flex-direction: row;
+        grid-template-columns: repeat(3, 1fr);
+        
+        Button{
+            background-color: grey;
+            color: black;
+            height: 1.5rem;
+            border-radius: 0rem;
+        
+        }
+    }
+}
+
+.rs-input-group.rs-input-group-inside .rs-input-group-addon {
+	padding-top: 0.25rem;
+}
+
+.nextui-button-text.nextui-button-text-right, .nextui-button-icon.nextui-button-icon-right {
+	z-index: 0;
+}

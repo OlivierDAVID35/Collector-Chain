@@ -1,0 +1,32 @@
+@use '../../../styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.app {
+    // max-width: 414px;
+  background-color: vars.$color_primary;
+  overflow-y: hidden;
+  font-family: 'Roboto', sans-serif;
+  color: vars.$color_text;
+  height: 100%;
+
+  main {
+	  width: 100vw;
+	  margin: vars.$dimension_header_height auto;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2{
+    font-size: 1.2rem;
+  }
+
+}
+
+// DARK MODE
+// .darkmode-toggle, .darkmode-toggle--white {
+// 	z-index: 500;
+// 	position: absolute;
+// 	top: -0.25rem; 
+// }

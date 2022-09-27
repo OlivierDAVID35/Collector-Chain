@@ -1,0 +1,32 @@
+@use '../../../../styles/vars';
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: vars.$dimension_header_height;
+
+    h1{
+        text-align: center;
+    }
+
+	
+    &__underHeader{
+		z-index: 1;
+		width: 100%;
+        padding: 1rem 0 .5rem 0;
+		background-color: vars.$color_secondary;
+		position: fixed;
+		top:3rem;
+    }
+
+    &__list{
+		z-index: 0;
+        margin: 6rem 1rem 0rem 1rem;
+        display: grid;
+        flex-direction: row;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+}

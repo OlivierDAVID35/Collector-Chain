@@ -1,0 +1,103 @@
+@use '../../../styles/vars';
+
+.menu-mobile {
+	z-index: 20;
+	background-color: vars.$color_secondary;
+	width: 100vw;
+	height: vars.$dimension_menuMobile_height;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	// padding-top: .5rem;
+	font-size: 1.1rem;
+	box-shadow: vars.$boxShadow_footer ;
+}
+
+.menu-mobile-nav {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	// & a {
+	// 	color:vars.$color_text;
+	// }
+	
+	&-create{
+		background-color: rgba($color: #ff9c11, $alpha: .2);
+		box-shadow: 0 0 10px vars.$color_callToAction;
+		padding: .5rem 2rem; 
+		border-radius: 2rem;
+		font-size: 1.3rem;
+		color: vars.$color_text_lighter;
+		animation: background 3s ease infinite;
+
+		@keyframes background {
+			0%{
+				box-shadow: 0 0 15px vars.$color_callToAction;
+				background-color: rgba($color: vars.$color_callToAction, $alpha: 1);
+			}
+			50%{
+				box-shadow: 0 0 15px rgba($color: vars.$color_callToAction, $alpha: .2);
+				background-color: rgba($color: vars.$color_callToAction, $alpha: .5);
+			}
+			100%{
+				box-shadow: 0 0 15px vars.$color_callToAction;
+				background-color: rgba($color:vars.$color_callToAction, $alpha: 1);
+			}
+			
+		}
+
+		
+		// a:visited, a:link{
+		// 	text-decoration: none;
+		// 	background-color: transparent;
+		// 	color: red;
+		// }
+	}
+}
+
+.button {
+	&__signin, &__signup {
+		font-size: medium;
+		background-color: vars.$color_callToAction;
+		color: vars.$color_text_secondary;
+		padding: 0.75rem 1.5rem;
+		margin-left: 1rem;
+		border-radius: 0.75rem;
+	}
+	&__close {
+		font-size:medium;
+		background-color: vars.$color_secondary;
+		color:vars.$color_text_lighter;
+		padding: 0.75rem 1.75rem;
+		border-radius: 0.75rem;	
+	}
+
+}
+
+.menu-user{
+	a{
+		color: vars.$color_text;
+		font-weight: bold;
+	}
+}
+
+.modal-login, .modal-signup {
+	background-color: vars.$color_background;
+	box-shadow: vars.$boxShadow_Light;
+
+	&-error {
+		color: vars.$color_text_secondary;
+		background: #c20f0f;
+		box-shadow: vars.$boxShadow_Light;
+		opacity: 0.75;
+		font-size: medium;
+		text-transform:capitalize;
+		width: fit-content;
+		margin: 0 auto;
+		padding: 0.25rem 1em;
+		border-radius: 0.5rem;
+	}
+}

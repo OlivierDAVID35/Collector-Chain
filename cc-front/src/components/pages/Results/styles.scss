@@ -1,0 +1,23 @@
+.results {
+	& h1 {
+		text-align: center;
+	}
+	& .slide {
+		height : 25rem; 
+		margin: 0 2rem;
+	} 
+
+	& .swiper {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+	& .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: transparent;
+	height: calc((100% - 50px) / 2) !important;
+	}
+}

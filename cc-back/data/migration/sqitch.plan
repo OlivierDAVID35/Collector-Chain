@@ -1,0 +1,13 @@
+%syntax-version=1.0.0
+%project=collector_chain
+
+init 2022-08-17T12:58:04Z Loic Berland <berland.loic@yahoo.fr> # initialize BDD
+v2 2022-08-22T13:03:29Z Loic Berland <berland.loic@yahoo.fr> # update table modify nft for add owner and creator and rarity
+V3 2022-08-23T10:31:32Z Loic Berland <berland.loic@yahoo.fr> # remove NOT NULL on tag_id in property
+V4 2022-08-24T07:43:41Z Loic Berland <berland.loic@yahoo.fr> # add in user db name firstName and isOpenToContact
+v5 2022-08-24T09:15:08Z Loic Berland <berland.loic@yahoo.fr> # add in property column nameTagId unique and name drop unique
+v6 2022-08-24T14:02:41Z Loic Berland <berland.loic@yahoo.fr> # change property tag in manyToMany remove tag_id from property and create propertyThastag
+v7 2022-08-25T11:28:28Z Loic Berland <berland.loic@yahoo.fr> # add contraint primaryKey in collection between name and category_id
+v8 2022-08-30T12:38:52Z Loic Berland <berland.loic@yahoo.fr> # add serial and model in nft table change check >0 by >=0
+v9 2022-08-31T10:07:42Z Loic Berland <berland.loic@yahoo.fr> # add view get nft
+v10 2022-09-01T09:30:22Z Loic Berland <berland.loic@yahoo.fr> # add showcase_id in nft

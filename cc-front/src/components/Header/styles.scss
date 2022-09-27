@@ -1,0 +1,125 @@
+@use '../../../styles/vars';
+
+.menu {
+	background-color: vars.$color_secondary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	z-index: 10;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+    height: vars.$dimension_header_height;
+    padding: .5rem;
+    box-shadow: vars.$boxShadow_header ;
+
+    &__btn{
+        display: flex;
+        width: 10rem;
+        justify-content: flex-end;
+    }
+
+    &__search {
+		margin-right: 2rem;
+        background-color: transparent;
+        border: none;
+    }
+
+	&__scrollToTop {
+		background-color: transparent;
+	}
+
+    &__searchBar{
+        width: 0;
+        visibility: hidden;
+        transition: all .5s;
+        border: 0;
+
+        &-open {
+            border:0;
+            width: 80vw;
+            transition: all .5s;
+        }}
+
+		// &__logo {
+		// 	width: 75%;
+		// }
+
+    ion-icon{
+        font-size: 2rem;
+        color: vars.$color_callToAction;
+        margin: .5rem;
+    }
+
+    &__form{
+        &--active{
+            width: 100%;
+            transition: all .5s;
+        }
+        width: 100%;
+        transition: all .5s;
+        transform: translateX(-71vw);
+        z-index: 15;
+        
+    }
+
+    a:link, a:visited{
+        text-decoration: none;
+        color: vars.$color_text;
+    }
+
+    h1{
+        // font-weight: bold;
+        letter-spacing: .03rem;
+        position: absolute;
+        top: .75rem;
+        left: .5rem;
+    }
+
+}
+
+.result{
+    z-index: 20;
+    position: absolute;
+    top: vars.$dimension_header_height;
+
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+    margin-left: .5rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 0 1rem;
+
+    background-color: vars.$color_background;
+    box-shadow: 0px 0px 10px vars.$color_secondary;
+
+    p{
+        padding: .2rem .5rem;
+    }
+    &__title{
+        color: vars.$color_text;
+        font-weight: bold;
+        margin: .2rem 0;
+        border-bottom: solid 1px vars.$color_text;
+        padding-bottom: .25rem;
+        margin-top: .5rem;
+    }
+
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: .2rem .5rem;
+        color:vars.$color_text;
+        list-style: none;
+
+        img{
+            height: 2rem;
+            border-radius: 1rem;
+            aspect-ratio: 1;
+        }
+
+
+    }
+}

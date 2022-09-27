@@ -1,0 +1,63 @@
+@use'../../../../styles/vars';
+
+.rs-modal-content{
+	padding: 0;
+}
+
+#modal-title{
+	color: vars.$color_text;
+	font-weight: bold;
+}
+
+.nftOwned {
+	background-color: vars.$color_background;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	top: 12rem;
+	// width: 90%;
+	border-radius: 1rem;
+	box-shadow: vars.$boxShadow_Light;
+
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__card{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 45%;
+		background-color:grey;
+		border-radius: .5rem;
+		aspect-ratio: 1;
+		margin: 0.25rem;
+		position: relative;
+	
+		&-image{
+			padding: 0.5rem;
+			object-fit: cover;
+			height: 100%;
+		}
+	
+		&-title {
+			font-size:medium;
+			position: absolute;
+			bottom: 0;
+			background-color: rgba($color: #fff, $alpha: 0.75);
+			padding: 0.2rem 0;
+			width: 100%;
+			border-bottom-left-radius: .5rem;
+			border-bottom-right-radius: .5rem;
+			text-align: center;
+			position: absolute;
+			bottom: 0;
+			
+			
+		}
+	}
+}

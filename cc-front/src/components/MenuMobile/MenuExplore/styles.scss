@@ -1,0 +1,9 @@
+
+@use'../../../../styles/vars';
+
+.menu-explore{
+    a{
+        color: vars.$color_text;
+        font-weight: bold;
+    }
+}

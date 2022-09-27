@@ -1,0 +1,43 @@
+@use'../../../../styles/vars';
+
+.nftCard{
+	// position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color:grey;
+    border-radius: .5rem;
+    aspect-ratio: 1;
+    box-shadow: vars.$boxShadow_Light;
+    // position: relative;
+
+    &__image{
+		// padding: 0.2rem;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem ;
+        object-fit: cover;
+        aspect-ratio: 1;
+        // height: 100%;
+    }
+
+    &__title {
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size:medium;
+        background-color: rgba($color: #fff, $alpha: 0.75);
+        color: vars.$color_text_secondary;
+		height: 2.5rem;
+        padding: 0.2rem 0.5rem;
+        width: 100%;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        text-align: center;
+    }
+
+	&__icons {
+		padding-top: 0.3rem;
+	}
+}

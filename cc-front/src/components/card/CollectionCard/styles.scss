@@ -1,0 +1,35 @@
+@use '../../../../styles/vars';
+
+.collectionCard{
+	position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color:grey;
+	border-radius: 0.5rem;
+    aspect-ratio: 1;
+    box-shadow: vars.$boxShadow_Light;
+
+    &__image{
+        object-fit: cover;
+        height: 100%;
+		border-radius: .5rem;
+    }
+
+	&__title {
+		font-size:medium;
+		// position: absolute;
+		// bottom: 0;
+        background-color: rgba($color: #fff, $alpha: 0.75);
+        color: vars.$color_text_secondary;
+        padding: 0.2rem 0;
+        width: 100%;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        
+    }
+}

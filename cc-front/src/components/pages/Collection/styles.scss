@@ -1,0 +1,73 @@
+@use '../../../../styles/vars';
+
+.collection{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: vars.$dimension_header_height;
+	margin-bottom: 3rem;
+    
+    
+    &__title{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: vars.$color_secondary;
+        height: 100px;
+        
+        
+        &__image{
+            height: 80px;
+            width: 80px;
+            background-color: darkgray;
+            margin: .5rem;
+        }
+
+        &__text{
+            flex-grow: 2;
+            
+            margin: .5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: .5rem;
+            
+            &__main{
+                p{
+                    font-size: .9rem;
+                }
+                
+                &__head{
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+            }
+            
+            &__stats{
+                display: grid;
+                flex-direction: row;
+                grid-template-columns: repeat(3, 1fr);
+                
+                h3{
+                    font-size: .9rem;
+                }
+                p{
+                    font-weight: bold;
+                }
+            }
+        }
+
+       
+
+    }
+
+    &__list{
+        display: grid;
+        flex-direction: row;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: .5rem 1rem 0rem 1rem;
+    }
+
+}

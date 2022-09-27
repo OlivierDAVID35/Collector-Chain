@@ -1,0 +1,29 @@
+// .container {
+
+// 	& .sub-container {
+// 		display:flex;
+// 		flex-direction: column;
+// 		padding-top: 1rem;
+// 	}
+// 	& .slide {
+// 	height : 12.5rem; 
+// 	margin: 0 2rem;
+// 	}
+
+// 	& .swiper {
+// 	width: 100%;
+// 	height: 100%;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	}
+
+// 	& .swiper-slide {
+// 	text-align: center;
+// 	font-size: 18px;
+// 	background: transparent;
+// 	height: calc((100% - 30px) / 2) !important;
+// 	}
+// 	& .swiper-pagination {
+// 		bottom: 0;
+// 	}
+// }

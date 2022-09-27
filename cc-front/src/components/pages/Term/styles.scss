@@ -1,0 +1,11 @@
+@use '../../../../styles/vars';
+
+.term {
+    margin: .5rem;
+    margin-top: vars.$dimension_header_height ;
+
+    p{
+        font-size: .8rem;
+        margin: 1rem 0;
+    }
+}
